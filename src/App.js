@@ -51,7 +51,7 @@ class App extends React.Component {
     // also this is async.
   }
   handleDecreaseQuantity = (product) => {
-    console.log('Heyy please inc the qty of ', product);
+    console.log('Heyy please dec the qty of ', product);
     const { products } = this.state;
     const index = products.indexOf(product);
 
@@ -90,9 +90,9 @@ class App extends React.Component {
 
     let cartTotal = 0;
 
-    products.map((product) => {
+    products.map((product) => (
       cartTotal = cartTotal + product.qty * product.price
-    })
+    ))
 
     return cartTotal;
   }
